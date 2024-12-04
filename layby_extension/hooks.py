@@ -245,3 +245,11 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# fixtures = ["Custom Field"]
+
+# override_doctype_class = {
+#     "Customer": "layby_extension.doctype.customer.customer.Customer"
+# }
+doctype_js = {
+    "Customer": "public/js/customer.js"
+}

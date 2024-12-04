@@ -1,0 +1,42 @@
+[
+    {
+        "fieldname": "verification_type",
+        "label": "Verification Type",
+        "fieldtype": "Select",
+        "options": "\nNone\nID Number\nPassport",
+        "insert_after": "email_id",
+        "reqd": 0
+    },
+    {
+        "fieldname": "id_number",
+        "label": "ID Number",
+        "fieldtype": "Data",
+        "insert_after": "verification_type",
+        "depends_on": "eval:doc.verification_type=='ID Number'",
+        "reqd": 0
+    },
+    {
+        "fieldname": "passport_number",
+        "label": "Passport Number",
+        "fieldtype": "Data",
+        "insert_after": "id_number",
+        "depends_on": "eval:doc.verification_type=='Passport'",
+        "reqd": 0
+    },
+    {
+        "fieldname": "passport_country_of_origin",
+        "label": "Passport Country of Origin",
+        "fieldtype": "Link",
+        "options": "Country",
+        "insert_after": "passport_number",
+        "depends_on": "eval:doc.verification_type=='Passport'",
+        "reqd": 0
+    },
+    {
+        "fieldname": "layby_eligibility",
+        "label": "Lay-by Eligibility",
+        "fieldtype": "Check",
+        "insert_after": "passport_country_of_origin",
+        "read_only": 1
+    }
+]
