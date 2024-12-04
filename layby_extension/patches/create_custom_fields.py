@@ -11,6 +11,13 @@ def execute():
                 "options": "\nNone\nID Number\nPassport",
                 "insert_after": "email_id",
                 "reqd": 0
+            },
+            {
+                "fieldname": "layby_eligibility",
+                "label": "Lay-by Eligibility",
+                "fieldtype": "Check",
+                "insert_after": "passport_country_of_origin",
+                "read_only": 0  # Make the field writable
             }
         ]
     }
